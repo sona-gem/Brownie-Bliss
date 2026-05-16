@@ -5733,13 +5733,21 @@ html.dark .toast { color: #FFF9F2 !important; }
 html.dark #result { background: var(--cream-dark) !important; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important; border-color: #3a2010 !important; }
 
 /* Tracking Timeline Dark Mode */
+html.dark .track-container button { background: var(--gold); color: var(--brown-dark); border-color: var(--gold); }
+html.dark #result h3 { color: var(--text-dark); }
+html.dark #result h4 { color: var(--gold); }
+html.dark .receipt-table td, html.dark .item-list li { border-color: #3a2010; color: var(--text-mid); }
+html.dark .result-total { border-top-color: #3a2010; }
+html.dark .result-total td { color: var(--text-dark); font-weight: bold; }
+
 html.dark .order-meta { background: #1a1008; border: 1px solid #3a2010; }
 html.dark .meta-value { color: var(--text-dark); }
-html.dark .tracking-timeline::before { display: none; }
+html.dark .timeline-step:not(:last-child)::after { background: #3a2010; }
 html.dark .step-icon { background: var(--cream-dark); border-color: #3a2010; }
 html.dark .step-title { color: var(--text-dark); }
 html.dark .step-desc { color: var(--text-mid); }
 html.dark .timeline-step.completed .step-icon { background: #1a1008; border-color: var(--gold); }
 html.dark .timeline-step.active .step-icon { background: var(--gold); border-color: var(--gold); }
 html.dark .cancelled-alert { background: rgba(153, 27, 27, 0.2); color: #fca5a5; border-color: rgba(153, 27, 27, 0.4); }
+
 
