@@ -384,7 +384,7 @@ app.post('/api/orders', async (req, res) => {
 });
 
 // Get all orders (admin)
-app.get('/api/orders', async (req, res) => {
+app.get('/api/orders', adminAuth, async (req, res) => {
   try {
     const { status } = req.query;
     const filter = {};
@@ -450,7 +450,7 @@ app.patch('/api/orders/:orderId/status', adminAuth, async (req, res) => {
 });
 
 // Stats for admin dashboard
-app.get('/api/stats', async (req, res) => {
+app.get('/api/stats', adminAuth, async (req, res) => {
   try {
     const [totalOrders, pendingOrders, paidOrders, revenueResult] = await Promise.all([
       Order.countDocuments(),
