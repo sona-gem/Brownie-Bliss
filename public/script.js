@@ -840,6 +840,8 @@ function addBirthdayToCart() {
         qty: 1
     };
     addToCart(item);
+    showToast('🎂 Birthday cake added to cart!');
+    openCart();
     if (msgInput) msgInput.value = '';
 }
 
