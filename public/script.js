@@ -653,7 +653,12 @@ function filterProducts(category, btn) {
                 ${p.description ? `<div class="product-desc">${p.description}</div>` : ''}
                 <div class="product-price">₹${p.price}</div>
                 <button type="button" class="add-to-cart" data-product-id="${String(p.id)}">Add to Cart</button>
-                <button class="add-to-cart">Customize & Add</button>
+                <button
+                    type="button"
+                    class="customize-and-add"
+                    onclick='openCustomizeModal(${JSON.stringify(p).replace(/'/g, "&#39;")})'>
+                    Customize & Add
+                </button>
             </div>
         </div>
     `).join('');
